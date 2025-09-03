@@ -1,5 +1,9 @@
 # Fluxo de Desenvolvimento Product On Rails
 
+## Recursos Adicionais
+
+- **[MCPs.md](MCPs.md)** - Referência de MCP Servers úteis para desenvolvimento
+
 ## CLAUDE.md
 
 O arquivo CLAUDE.md.example contém um exemplo inicial de como configurar seu arquivo CLAUDE.md.
