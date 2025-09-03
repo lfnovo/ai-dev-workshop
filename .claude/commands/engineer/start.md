@@ -1,76 +1,76 @@
 
 # Engineer Start
 
-This is the command to trigger the start of development for a feature.
+Este é o comando para iniciar o desenvolvimento de uma funcionalidade.
 
-## Setup
-- If we are not in a feature branch, ask for permission to create one
-- If we are in a feature branch that matches the feature name, we are good. 
-- Make sure there is a .claude/sessions/<feature_slug> folder
-- Ask the user for the input for this session (you will be given one or more linear cards to work on)
+## Configuração
+- Se não estivermos em uma feature branch, peça permissão para criar uma
+- Se estivermos em uma feature branch que corresponde ao nome da funcionalidade, estamos prontos.
+- Certifique-se de que existe uma pasta .claude/sessions/<feature_slug>
+- Peça ao usuário o input para esta sessão (você receberá um ou mais cards do Linear para trabalhar)
 
-## Analysis
+## Análise
 
-Go through the cards, parents and children if required, and build an initial understanding of what needs to be build. Think carefully about what is requested, ensure you understand exactly: 
-    - Why this is being built (context)
-    - What is the expected outcome for this issue? (goal)
-    - How should it be built, just directionally, not in details (approach)
-    - If it requires using new APIs/tools, do you understand them?
-    - How should this be tested?
-    - What are the dependencies?
-    - What are the constraints?
+Analise os cards, pais e filhos se necessário, e construa um entendimento inicial do que precisa ser desenvolvido. Pense cuidadosamente sobre o que é solicitado, certifique-se de entender exatamente:
+    - Por que isso está sendo construído (contexto)
+    - Qual é o resultado esperado para esta issue? (objetivo)
+    - Como deve ser construído, apenas direcionalmente, não em detalhes (abordagem)
+    - Se requer o uso de novas APIs/ferramentas, você as entende?
+    - Como deve ser testado?
+    - Quais são as dependências?
+    - Quais são as restrições?
 
-After you reflect on this questions, come up with the 3-5 most important clarifications needed to complete the task. Ask the human for those questions, while also providing your understanding and suggestions.
+Após refletir sobre essas questões, formule as 3-5 clarificações mais importantes necessárias para completar a tarefa. Pergunte essas questões ao humano, enquanto também fornece seu entendimento e sugestões.
 
-After you get the human's answers, ponder on whether you need to ask more questions. If so, ask the human more questions.
+Depois de obter as respostas do humano, considere se precisa fazer mais perguntas. Se sim, faça mais perguntas ao humano.
 
-Once you have a good understanding of what is being built, save it in the .claude/sessions/<feature_slug>/context.md file and ask the human to review it.
+Uma vez que tenha um bom entendimento do que está sendo construído, salve-o no arquivo .claude/sessions/<feature_slug>/context.md e peça ao humano para revisar.
 
-If the human agrees with your understanding, you can proceed to the next step. Otherwise, keep iterating together until you get explicit approval to  move forward.
+Se o humano concordar com seu entendimento, você pode prosseguir para o próximo passo. Caso contrário, continue iterando juntos até obter aprovação explícita para seguir em frente.
 
-If anything you discussed here affects what has been written in the requirements, ask the human for permission to edit those requirements and make adjustments either by editing (structural changes) or by adding comments (clarifications).
+Se algo que você discutiu aqui afeta o que foi escrito nos requisitos, peça permissão ao humano para editar esses requisitos e fazer ajustes seja editando (mudanças estruturais) ou adicionando comentários (clarificações).
 
-If the requirement is in a Linear card, edit the linear card. 
-If the requirement is from a text file, edit the text file.
+Se o requisito estiver em um card do Linear, edite o card do Linear.
+Se o requisito for de um arquivo de texto, edite o arquivo de texto.
 
-## Architecture
+## Arquitetura
 
-Given your understanding of what will be built, you will now proceed to developing the architecture of the feature. The architecture document should map what is being built, the components, the dependencies, the patterns, the technologies, the constraints, the assumptions, the trade-offs, the alternatives, the consequences.
+Dado seu entendimento do que será construído, você agora procederá ao desenvolvimento da arquitetura da funcionalidade. O documento de arquitetura deve mapear o que está sendo construído, os componentes, as dependências, os padrões, as tecnologias, as restrições, as suposições, os trade-offs, as alternativas, as consequências.
 
-This is where you will put your ultra thinking hat and consider the best path to build the feature, while also considering the patterns and best practices for this project. 
+É aqui que você colocará seu chapéu de pensamento ultra e considerará o melhor caminho para construir a funcionalidade, considerando também os padrões e melhores práticas deste projeto.
 
-In this section, you are expected to go through the relevant source code, understand its structure and its purpose, and then build an architecture that aligns with the project's patterns and best practices.
+Nesta seção, espera-se que você analise o código fonte relevante, entenda sua estrutura e propósito, e então construa uma arquitetura que se alinha com os padrões e melhores práticas do projeto.
 
-Tips:
-   - Find specific files based on discovery answers
-   - Read relevant code
-   - Deep dive into similar features and patterns
-   - Analyze specific implementation details
-   - Use WebSearch and or context7 for best practices or library documentation (if required)
+Dicas:
+   - Use mcp__RepoPrompt__search (se disponível) para encontrar arquivos específicos baseados nas respostas de descoberta
+   - Use mcp__RepoPrompt__set_selection e read_selected_files (se disponível) para ler código relevante em batch
+   - Mergulhe fundo em funcionalidades e padrões similares
+   - Analise detalhes específicos de implementação
+   - Use WebSearch e ou context7 para melhores práticas ou documentação de bibliotecas (se necessário)
 
-Your architecture document should include:
-    - A high-level overview of the system (before and after the change)
-    - Affected components and their relationships, dependencies
-    - Patterns and best practices that will be kept or introduced
-    - External dependencies that will be used or that need to be added to the project
-    - Constraints and assumptions
-    - Trade-offs and alternatives
-    - Negative consequences (if any) to implementing this design
-    - List of the top files to be edited/created
+Seu documento de arquitetura deve incluir:
+    - Uma visão geral de alto nível do sistema (antes e depois da mudança)
+    - Componentes afetados e suas relações, dependências
+    - Padrões e melhores práticas que serão mantidos ou introduzidos
+    - Dependências externas que serão usadas ou que precisam ser adicionadas ao projeto
+    - Restrições e suposições
+    - Trade-offs e alternativas
+    - Consequências negativas (se houver) da implementação deste design
+    - Lista dos principais arquivos a serem editados/criados
 
-If it helps to build a MERMAID diagram, feel free to do so. 
+Se ajudar a construir um diagrama MERMAID, sinta-se livre para fazê-lo.
 
-If, at any point, you have questions or if you find something that contradicts what you previously understood, ask the human for clarification.
+Se, a qualquer momento, você tiver dúvidas ou encontrar algo que contradiga o que entendeu anteriormente, peça esclarecimentos ao humano.
 
-Once you have a good understanding of what is being built, save it in the .claude/sessions/<feature_slug>/architecture.md file and ask the human to review it.
+Uma vez que tenha um bom entendimento do que está sendo construído, salve-o no arquivo .claude/sessions/<feature_slug>/architecture.md e peça ao humano para revisar.
 
-If the human agrees with your understanding, you can proceed to the next step. Otherwise, keep iterating together until you get explicit approval to  move forward.
+Se o humano concordar com seu entendimento, você pode prosseguir para o próximo passo. Caso contrário, continue iterando juntos até obter aprovação explícita para seguir em frente.
 
-Once the architecture.md is finished, state to the human that you are ready to proceed to the next step.
+Uma vez que o architecture.md esteja finalizado, informe ao humano que você está pronto para prosseguir para o próximo passo.
 
-## Research
+## Pesquisa
 
-If you are not sure how a specific library work, you can use Context7 and Perplexity to search for information about it. So, do not try to guess.
+Se você não tem certeza de como uma biblioteca específica funciona, você pode usar Context7 e Perplexity para buscar informações sobre ela. Então, não tente adivinhar.
 
 <feature_slug>
 #$ARGUMENTS

@@ -1,32 +1,32 @@
 
-This is a documentation project for several open source projects for our organization. The idea for this repo is to be the one specification that drives all other specs, code, design and test artifacts. It is our canonical source of truth for all our projects.
+Este é um projeto de documentação para vários projetos open source de nossa organização. A ideia deste repositório é ser a especificação única que direciona todas as outras especificações, código, design e artefatos de teste. É nossa fonte canônica de verdade para todos os nossos projetos.
 
-Each project has its own folder under @/projects/ folder.
-Inside each of these folders, there is an index.md file that points to all other useful resources in the project.
+Cada projeto tem sua própria pasta sob a pasta @/projects/
+Dentro de cada uma dessas pastas, há um arquivo index.md que aponta para todos os outros recursos úteis do projeto.
 
-## Usage
+## Uso
 
 ### /build-index
 
-If no arguments are provided, the command will build the root projects index.md file under the folder @/projects/
-This index should provide basic information about each project, such as:
+Se nenhum argumento for fornecido, o comando construirá o arquivo index.md raiz dos projetos sob a pasta @/projects/
+Este índice deve fornecer informações básicas sobre cada projeto, tais como:
 
-- name with link to its folder
-- short description
-- linear project id
-- linear team id
-- repository url
+- nome com link para sua pasta
+- descrição breve
+- id do projeto linear
+- id da equipe linear
+- url do repositório
 
-This information is easily available inside the projects main files (either index.md or 2-project_management.md)
+Esta informação está facilmente disponível dentro dos arquivos principais dos projetos (seja index.md ou 2-project_management.md)
 
-Do not add anything else besides the information above.
+Não adicione mais nada além das informações acima.
 
 
-### /build-index <project-name>
+### /build-index <nome-do-projeto>
 
-This is used to rebuild the project index after we change the directory and file structure.
-Please go through the project's folder structure, understand what files and folders are there and refine the index.md file for the project. If the project doesn't have an index.md file, create it.  If it does, edit it to reflect the current structure.
+Isso é usado para reconstruir o índice do projeto depois que mudamos a estrutura de diretórios e arquivos.
+Por favor, vá através da estrutura de pastas do projeto, entenda quais arquivos e pastas estão lá e refine o arquivo index.md para o projeto. Se o projeto não tiver um arquivo index.md, crie-o. Se tiver, edite-o para refletir a estrutura atual.
 
-The index should point to all other useful resources in the project folder.
+O índice deve apontar para todos os outros recursos úteis na pasta do projeto.
 
-Provided arguments: #$ARGUMENTS
+Argumentos fornecidos: #$ARGUMENTS

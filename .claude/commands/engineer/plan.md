@@ -1,76 +1,76 @@
 
 # Engineer Reason
 
-This is the command to trigger the start of planning for a feature.
+Este é o comando para iniciar o planejamento de uma funcionalidade.
 
 <arguments>
 #$ARGUMENTS
 </arguments>
 
-## Analysis
+## Análise
 
-Read throught the context.md and architecture.md files in the .claude/sessions/<feature_slug> folder if not done already. 
+Leia os arquivos context.md e architecture.md na pasta .claude/sessions/<feature_slug> se ainda não tiver feito.
 
-Your task now is to create a detailed implementation plan (plan.md) for this feature. The goal for this documentation if to create a phased implementation approach that enables us to build the feature incrementally, testing each phase as we go. And it should also make it possible to resume the work in case our session is interrupted.
+Sua tarefa agora é criar um plano de implementação detalhado (plan.md) para esta funcionalidade. O objetivo desta documentação é criar uma abordagem de implementação faseada que nos permita construir a funcionalidade incrementalmente, testando cada fase conforme avançamos. E também deve tornar possível retomar o trabalho caso nossa sessão seja interrompida.
 
-The plan.md should divide the implementation in phases, each phase with a chunk of the work that could be accomplished by a human in 2 hours.
+O plan.md deve dividir a implementação em fases, cada fase com um pedaço do trabalho que pode ser realizado por um humano em 2 horas.
 
-The template for the plan.md is:
+O template para o plan.md é:
 
 <plan>
-# [FEATURE NAME]
+# [NOME DA FUNCIONALIDADE]
 
-If you are working on this feature, make sure to update this plan.md file as you go. 
+Se você está trabalhando nesta funcionalidade, certifique-se de atualizar este arquivo plan.md conforme progride.
 
-## PHASE 1 [Completed ✅]
+## FASE 1 [Completada ✅]
 
-Details of this part of the feature
+Detalhes desta parte da funcionalidade
 
-### A task that was done [Completed ✅]
+### Uma tarefa que foi feita [Completada ✅]
 
-Details about the task
+Detalhes sobre a tarefa
 
-### A task that was done [Completed ✅]
+### Uma tarefa que foi feita [Completada ✅]
 
-Details about the task
+Detalhes sobre a tarefa
 
-### Comments:
-- Something that happened and forced us to change paths
-- Something we learned during development
-- Something we discussed and agreed on
+### Comentários:
+- Algo que aconteceu e nos forçou a mudar de direção
+- Algo que aprendemos durante o desenvolvimento
+- Algo que discutimos e concordamos
 
-## PHASE 2 [In Progress ⏰]
+## FASE 2 [Em Progresso ⏰]
 
-### A task that needs to be done [In Progress ⏰]
+### Uma tarefa que precisa ser feita [Em Progresso ⏰]
 
-Details about the task
+Detalhes sobre a tarefa
 
-### A task that needs to be done [Not Started ⏳]
+### Uma tarefa que precisa ser feita [Não Iniciada ⏳]
 
-Details about the task
+Detalhes sobre a tarefa
 
-## PHASE 3 [Not Started ⏳]
+## FASE 3 [Não Iniciada ⏳]
 
-### A task that needs to be done [Not Started ⏳]
+### Uma tarefa que precisa ser feita [Não Iniciada ⏳]
 
-Details about the task
+Detalhes sobre a tarefa
 
-### A task that needs to be done [Not Started ⏳]
+### Uma tarefa que precisa ser feita [Não Iniciada ⏳]
 
-Details about the task
+Detalhes sobre a tarefa
 
 </plan>
 
 
-Tips:
-   - Use repoprompt:search (if available) to find specific files based on discovery answers
-   - Use repoprompt:set_selection and repoprompt:read_selected_files (if available) to batch read relevant code
-   - Analyze specific implementation details
-   - Use WebSearch and or context7 for best practices or library documentation (if required)
+Dicas:
+   - Use repoprompt:search (se disponível) para encontrar arquivos específicos baseados nas respostas de descoberta
+   - Use repoprompt:set_selection e repoprompt:read_selected_files (se disponível) para ler código relevante em batch
+   - Analise detalhes específicos de implementação
+   - Use WebSearch e ou context7 para melhores práticas ou documentação de bibliotecas (se necessário)
 
-In the event that this research raises a new architecture decision or contradiction with the previous decisions, you will start a discussion about it with the human, agree on the changes and update the architecture.md document for that feature is needed. 
+No caso desta pesquisa levantar uma nova decisão arquitetural ou contradição com as decisões anteriores, você iniciará uma discussão sobre isso com o humano, concordará com as mudanças e atualizará o documento architecture.md para aquela funcionalidade se necessário.
 
-This document should also note which tasks need to be done sequentially or in parallel.
+Este documento também deve anotar quais tarefas precisam ser feitas sequencialmente ou em paralelo.
 
-Once the plan.md is finished, state to the human that you are ready to proceed to the next step.
+Uma vez que o plan.md esteja finalizado, informe ao humano que você está pronto para prosseguir para o próximo passo.
 

@@ -1,0 +1,46 @@
+# Diretrizes do Claude
+
+## Geral
+
+- Se minha solicitação não fizer sentido, for confusa ou você não tiver certeza do que fazer, por favor me peça esclarecimento antes de começar. Não se sinta obrigado a concordar comigo, me corrija se achar que estou errado.
+- Se você tiver dúvidas sobre como algo deve funcionar ou o que deve ser feito, sempre me pergunte antes de começar.
+- Se alguma vez se sentir travado, pense intensamente e reflita sobre 5-7 possíveis fontes do seu problema, reduza às 2 fontes mais prováveis e então adicione logs para testar suas suposições antes de começar a corrigir as coisas.
+- Sempre visamos construir código limpo, manutenível e escalável. Se você está construindo algo que parece não seguir esses princípios, me peça esclarecimento.
+- Às vezes você tem uma inclinação para concordar comigo por causa do seu treinamento. Mas isso pode direcionar nosso trabalho na direção errada. Se eu te dei uma instrução que está errada, por favor me corrija. 
+
+## Github
+- Por favor, não mencione Claude code na mensagem de commit ou em qualquer descrição de PR
+- Use `gh cli` ao interagir com github para pull requests, ler comentários, etc
+- Use formatação de commit convencional
+
+## Orientação para documentação
+- Por favor, use Context7 para encontrar a documentação relevante e atualizada ao trabalhar com bibliotecas de terceiros, se necessário
+
+## Abordagem de Desenvolvimento
+- Pense criticamente antes de implementar - faça perguntas esclarecedoras quando os requisitos não estiverem claros
+- Sempre pesquise bibliotecas/APIs desconhecidas antes de tentar implementação. Assim que perceber que sua implementação falhou, ao invés de tentar novas implementações, pesquise. Isso nos poupará tempo e impedirá que a base de código fique inchada.
+- Verifique suposições através de testes e investigação
+
+## Padrões de Qualidade
+- O código deve compilar e executar sem erros
+- Trate casos de erro óbvios adequadamente
+- Use nomes claros para variáveis e funções
+
+## Estilo de Comunicação
+- Quando eu apresentar um problema, pesquise e/ou faça perguntas diagnósticas antes de pular para soluções
+- Explique o raciocínio por trás das recomendações
+- Seja honesto sobre incertezas e limitações
+- Sugira passos de investigação quando os problemas forem ambíguos
+
+## Gerenciamento de Contexto
+- Use sub-agentes para tarefas complexas de múltiplas etapas
+- Mantenha a conversa principal focada em decisões de alto nível
+
+## Sinais de Alerta a Evitar
+- Não implemente sem entender o problema raiz
+- Não faça múltiplas tentativas com tecnologia desconhecida sem pesquisar
+- Não sobrecarregue o contexto principal com detalhes de implementação
+
+## Acordos
+- Se eu te der uma URL como referência, espero que você sempre a visite e leia antes de começar a implementar
+- Não implemente coisas que não foram solicitadas. Se você tiver uma ideia de melhoria, me pergunte antes de decidir implementá-la

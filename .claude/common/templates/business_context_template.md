@@ -1,261 +1,261 @@
-# Business Context Architecture Template
-*Strategic framework for organizing business knowledge to enable AI-powered product development and customer success*
+# Template de Arquitetura de Contexto de Negócios
+*Framework estratégico para organizar conhecimento de negócios e habilitar desenvolvimento de produtos orientado por IA e sucesso do cliente*
 
 ---
 
-## Purpose of This Template
+## Propósito deste Template
 
-This template helps product teams design their **Business Context Architecture** - the systematic approach to organizing, structuring, and maintaining all business knowledge so that AI can understand your customers, product, and market as well as your best team members.
+Este template ajuda equipes de produto a projetar sua **Arquitetura de Contexto de Negócios** - a abordagem sistemática para organizar, estruturar e manter todo conhecimento de negócios para que a IA possa entender seus clientes, produto e mercado tão bem quanto os melhores membros da sua equipe.
 
-**Use this template to:**
-- Create AI-accessible business intelligence
-- Enable AI to make contextually appropriate product decisions
-- Scale institutional knowledge across teams
-- Improve customer experience through AI personalization
-- Accelerate new team member productivity
+**Use este template para:**
+- Criar inteligência de negócios acessível à IA
+- Permitir que a IA tome decisões de produto contextualmente apropriadas
+- Escalar conhecimento institucional entre equipes
+- Melhorar a experiência do cliente através de personalização com IA
+- Acelerar a produtividade de novos membros da equipe
 
 ---
 
-## Business Context Profile
+## Perfil do Contexto de Negócios
 
-### Company and Product Foundation
+### Fundamentos da Empresa e Produto
 
-**Company Overview:**
-- **Company Name:** `[Your Company]`
-- **Industry:** `__________`
-- **Company Stage:** 
-  - [ ] Startup (Pre-Product Market Fit)
-  - [ ] Growth (Post-PMF, Scaling)
-  - [ ] Enterprise (Mature, Multiple Products)
-  - [ ] Legacy (Established, Optimizing)
+**Visão Geral da Empresa:**
+- **Nome da Empresa:** `[Sua Empresa]`
+- **Indústria:** `__________`
+- **Estágio da Empresa:** 
+  - [ ] Startup (Pré-Product Market Fit)
+  - [ ] Crescimento (Pós-PMF, Escalando)
+  - [ ] Enterprise (Madura, Múltiplos Produtos)
+  - [ ] Legacy (Estabelecida, Otimizando)
 
-**Product Information:**
-- **Primary Product:** `__________`
-- **Product Category:** `__________`
-- **Target Market Size:** `__________`
-- **Business Model:** 
-  - [ ] SaaS Subscription
+**Informações do Produto:**
+- **Produto Principal:** `__________`
+- **Categoria do Produto:** `__________`
+- **Tamanho do Mercado Alvo:** `__________`
+- **Modelo de Negócios:** 
+  - [ ] Assinatura SaaS
   - [ ] Marketplace
   - [ ] E-commerce
   - [ ] Freemium
-  - [ ] Enterprise Licensing
-  - [ ] Other: `__________`
+  - [ ] Licenciamento Enterprise
+  - [ ] Outro: `__________`
 
-**Revenue and Scale:**
-- **Annual Revenue Range:** `$________`
-- **Customer Count:** `________`
-- **Team Size:** `____` people
-- **Primary Growth Metrics:** `__________`
-
----
-
-## Business Context Architecture Design
-
-**IMPORTANT: Create a multi-file structure with an index.md that links to separate files for each layer. Do NOT create one large file.**
-
-**Implementation Approach:**
-1. **First**: Create `index.md` with the business profile and layer links
-2. **Then**: Create individual files for each layer as needed
-3. **Finally**: Ensure all links in the index work correctly
-
-**File Naming Convention:**
-- Use UPPERCASE for generic business documentation files (e.g., `CUSTOMER_PERSONAS.md`)
-- Use lowercase for business-specific files (e.g., `business_profile.md`) 
-- Keep filenames descriptive and business-focused
-
-### Create an Index File First
-
-**Create: `index.md` (or `business_context.md`)**
-```markdown
-## Business Context Profile
-
-### Company and Product Foundation
-[Include the business profile information here]
+**Receita e Escala:**
+- **Faixa de Receita Anual:** `R$________`
+- **Número de Clientes:** `________`
+- **Tamanho da Equipe:** `____` pessoas
+- **Métricas Primárias de Crescimento:** `__________`
 
 ---
 
-## Layer 1: Customer Context Architecture
+## Design da Arquitetura de Contexto de Negócios
 
-- [Customer Personas](CUSTOMER_PERSONAS.md)
-- [Customer Journey](CUSTOMER_JOURNEY.md)
-- [Voice of Customer](VOICE_OF_CUSTOMER.md)
+**IMPORTANTE: Crie uma estrutura multi-arquivo com um index.md que faça links para arquivos separados para cada camada. NÃO crie um arquivo grande único.**
 
-## Layer 2: Product Context Architecture
+**Abordagem de Implementação:**
+1. **Primeiro**: Crie `index.md` com o perfil de negócios e links das camadas
+2. **Depois**: Crie arquivos individuais para cada camada conforme necessário
+3. **Finalmente**: Certifique-se de que todos os links no índice funcionem corretamente
 
-- [Product Strategy](PRODUCT_STRATEGY.md)
-- [Feature Catalog](FEATURE_CATALOG.md)
-- [Product Metrics](PRODUCT_METRICS.md)
+**Convenção de Nomeação de Arquivos:**
+- Use MAIÚsCULAS para arquivos de documentação de negócios genéricos (ex.: `PERSONAS_CLIENTES.md`)
+- Use minúsculas para arquivos específicos do negócio (ex.: `perfil_negocio.md`) 
+- Mantenha nomes de arquivo descritivos e focados no negócio
 
-## Layer 3: Market and Competitive Context
+### Crie um Arquivo Índice Primeiro
 
-- [Competitive Landscape](COMPETITIVE_LANDSCAPE.md)
-- [Industry Trends](INDUSTRY_TRENDS.md)
+**Crie: `index.md` (ou `contexto_negocio.md`)**
+```markdown
+## Perfil do Contexto de Negócios
 
-## Layer 4: Operational Business Context
+### Fundamentos da Empresa e Produto
+[Inclua as informações do perfil de negócios aqui]
 
-- [Sales Process](SALES_PROCESS.md)
-- [Messaging Framework](MESSAGING_FRAMEWORK.md)
-- [Customer Communication Guidelines](CUSTOMER_COMMUNICATION.md)
+---
 
-[Include remaining sections: Context Integration, Success Measurement, Implementation Strategy]
+## Camada 1: Arquitetura de Contexto do Cliente
+
+- [Personas dos Clientes](PERSONAS_CLIENTES.md)
+- [Jornada do Cliente](JORNADA_CLIENTE.md)
+- [Voz do Cliente](VOZ_CLIENTE.md)
+
+## Camada 2: Arquitetura de Contexto do Produto
+
+- [Estratégia do Produto](ESTRATEGIA_PRODUTO.md)
+- [Catálogo de Funcionalidades](CATALOGO_FUNCIONALIDADES.md)
+- [Métricas do Produto](METRICAS_PRODUTO.md)
+
+## Camada 3: Contexto de Mercado e Competitivo
+
+- [Panorama Competitivo](PANORAMA_COMPETITIVO.md)
+- [Tendências da Indústria](TENDENCIAS_INDUSTRIA.md)
+
+## Camada 4: Contexto Operacional de Negócios
+
+- [Processo de Vendas](PROCESSO_VENDAS.md)
+- [Framework de Mensagens](FRAMEWORK_MENSAGENS.md)
+- [Diretrizes de Comunicação com Cliente](COMUNICACAO_CLIENTE.md)
+
+[Incluir seções restantes: Integração de Contexto, Medição de Sucesso, Estratégia de Implementação]
 ```
 
-## Layer 1: Customer Context Architecture
+## Camada 1: Arquitetura de Contexto do Cliente
 
-### Customer Intelligence Framework
+### Framework de Inteligência do Cliente
 
-**Create: `CUSTOMER_PERSONAS.md`**
+**Crie: `PERSONAS_CLIENTES.md`**
 ```markdown
-# Customer Personas
+# Personas dos Clientes
 
-## Primary Persona: [Persona Name]
-### Demographics
-- Role/Title: [e.g., Marketing Manager]
-- Company Size: [e.g., 50-200 employees]
-- Industry: [e.g., SaaS, E-commerce]
-- Experience Level: [e.g., 2-5 years in role]
+## Persona Principal: [Nome da Persona]
+### Demografia
+- Cargo/Título: [ex.: Gerente de Marketing]
+- Tamanho da Empresa: [ex.: 50-200 funcionários]
+- Indústria: [ex.: SaaS, E-commerce]
+- Nível de Experiência: [ex.: 2-5 anos na função]
 
-### Goals and Motivations
-- Primary Goals: What are they trying to achieve?
-- Success Metrics: How do they measure success?
-- Career Aspirations: What drives them professionally?
+### Objetivos e Motivações
+- Objetivos Primários: O que eles estão tentando alcançar?
+- Métricas de Sucesso: Como eles medem o sucesso?
+- Aspirações de Carreira: O que os motiva profissionalmente?
 
-### Pain Points and Challenges
-- Current Process: How do they solve this today?
-- Friction Points: Where do they struggle?
-- Constraints: What limits their options?
+### Pontos de Dor e Desafios
+- Processo Atual: Como eles resolvem isso hoje?
+- Pontos de Atrito: Onde eles têm dificuldades?
+- Restrições: O que limita suas opções?
 
-### Technology Context
-- Tools Used: Current software stack
-- Technical Comfort: How technical are they?
-- Decision Process: How do they evaluate solutions?
+### Contexto Tecnológico
+- Ferramentas Usadas: Stack de software atual
+- Conforto Técnico: Quão técnicos eles são?
+- Processo de Decisão: Como eles avaliam soluções?
 
-### Communication Preferences
-- Preferred Channels: Email, Slack, phone, etc.
-- Language Style: Formal, casual, technical
-- Information Density: Brief summaries vs detailed analysis
+### Preferências de Comunicação
+- Canais Preferidos: Email, Slack, telefone, etc.
+- Estilo de Linguagem: Formal, casual, técnico
+- Densidade de Informação: Resumos breves vs análise detalhada
 
-### AI Interaction Notes
-- How should AI communicate with this persona?
-- What level of detail do they prefer?
-- What topics should AI avoid or emphasize?
+### Notas de Interação com IA
+- Como a IA deve se comunicar com esta persona?
+- Que nível de detalhe eles preferem?
+- Quais tópicos a IA deve evitar ou enfatizar?
 ```
 
-**Create: `CUSTOMER_JOURNEY.md`**
+**Crie: `JORNADA_CLIENTE.md`**
 ```markdown
-# Customer Journey Map
+# Mapa da Jornada do Cliente
 
-## Awareness Stage
-### Trigger Events
-What causes customers to start looking for solutions?
+## Estágio de Conscientização
+### Eventos Gatilho
+O que faz os clientes começarem a procurar soluções?
 
-### Information Sources
-Where do they research solutions?
+### Fontes de Informação
+Onde eles pesquisam soluções?
 
-### Key Questions
-What are they trying to understand?
+### Questões Chave
+O que eles estão tentando entender?
 
-### Success Criteria
-How do they evaluate if a solution might work?
+### Critérios de Sucesso
+Como eles avaliam se uma solução pode funcionar?
 
-## Evaluation Stage
-### Evaluation Criteria
-What factors do they consider most important?
+## Estágio de Avaliação
+### Critérios de Avaliação
+Quais fatores eles consideram mais importantes?
 
-### Decision Makers
-Who influences the purchase decision?
+### Tomadores de Decisão
+Quem influencia a decisão de compra?
 
-### Common Objections
-What concerns typically arise?
+### Objeções Comuns
+Quais preocupações tipicamente surgem?
 
-### Proof Points
-What evidence do they need to see?
+### Pontos de Comprovação
+Que evidência eles precisam ver?
 
-## Onboarding Stage
-### First Success Milestones
-What needs to happen for them to feel successful?
+## Estágio de Onboarding
+### Marcos de Primeiro Sucesso
+O que precisa acontecer para eles se sentirem bem-sucedidos?
 
-### Common Confusion Points
-Where do new customers typically struggle?
+### Pontos de Confusão Comuns
+Onde novos clientes tipicamente têm dificuldades?
 
-### Adoption Patterns
-How do successful customers typically use the product?
+### Padrões de Adoção
+Como clientes bem-sucedidos tipicamente usam o produto?
 
-## Growth Stage
-### Expansion Opportunities
-How do customers typically grow their usage?
+## Estágio de Crescimento
+### Oportunidades de Expansão
+Como os clientes tipicamente aumentam seu uso?
 
-### Advanced Use Cases
-What sophisticated workflows do power users develop?
+### Casos de Uso Avançados
+Que fluxos sofisticados os power users desenvolvem?
 
-### Success Indicators
-What behaviors indicate a thriving customer?
+### Indicadores de Sucesso
+Quais comportamentos indicam um cliente próspero?
 
-## Retention/Churn Patterns
-### Churn Risk Indicators
-Early warning signs of customer dissatisfaction
+## Padrões de Retenção/Churn
+### Indicadores de Risco de Churn
+Sinais precoces de insatisfação do cliente
 
-### Recovery Strategies
-How to re-engage at-risk customers
+### Estratégias de Recuperação
+Como reengajar clientes em risco
 
-### Renewal Drivers
-What motivates customers to continue/expand?
+### Motivadores de Renovação
+O que motiva clientes a continuar/expandir?
 ```
 
-### Customer Feedback Intelligence
+### Inteligência de Feedback do Cliente
 
-**Create: `VOICE_OF_CUSTOMER.md`**
+**Crie: `VOZ_CLIENTE.md`**
 ```markdown
-# Voice of Customer Intelligence
+# Inteligência da Voz do Cliente
 
-## Common Praise Themes
-What do customers consistently love about the product?
+## Temas de Elogio Comuns
+O que os clientes consistentemente amam no produto?
 
-## Frequent Complaints
-What issues come up repeatedly in support/feedback?
+## Reclamações Frequentes
+Quais problemas surgem repetidamente no suporte/feedback?
 
-## Feature Request Patterns
-What enhancements do customers request most often?
+## Padrões de Solicitação de Funcionalidades
+Quais melhorias os clientes solicitam com mais frequência?
 
-## Competitive Comparisons
-How do customers compare us to alternatives?
+## Comparações Competitivas
+Como os clientes nos comparam às alternativas?
 
-## Language and Terminology
-- How do customers describe our product?
-- What industry terms do they use?
-- What internal jargon should AI avoid?
+## Linguagem e Terminologia
+- Como os clientes descrevem nosso produto?
+- Que termos da indústria eles usam?
+- Que jargão interno a IA deve evitar?
 
-## Communication Patterns
-- Formal vs casual communication preferences
-- Response time expectations by customer type
-- Escalation triggers and preferences
+## Padrões de Comunicação
+- Preferências de comunicação formal vs casual
+- Expectativas de tempo de resposta por tipo de cliente
+- Gatilhos e preferências de escalonamento
 ```
 
 ---
 
-## Layer 2: Product Context Architecture
+## Camada 2: Arquitetura de Contexto do Produto
 
-### Product Intelligence Framework
+### Framework de Inteligência do Produto
 
-**Create: `PRODUCT_STRATEGY.md`**
+**Crie: `ESTRATEGIA_PRODUTO.md`**
 ```markdown
-# Product Strategy
+# Estratégia do Produto
 
-## Vision and Mission
-### Product Vision
-Where is the product going in 2-3 years?
+## Visão e Missão
+### Visão do Produto
+Para onde o produto está indo em 2-3 anos?
 
-### Mission Statement
-What problem does the product solve?
+### Declaração de Missão
+Que problema o produto resolve?
 
-### Success Definition
-How do you measure product success?
+### Definição de Sucesso
+Como você mede o sucesso do produto?
 
-## Market Position
-### Competitive Landscape
-- Direct Competitors: [List and brief description]
-- Indirect Competitors: [Alternative solutions]
-- Competitive Advantages: [What differentiates you]
+## Posição no Mercado
+### Panorama Competitivo
+- Concorrentes Diretos: [Lista e breve descrição]
+- Concorrentes Indiretos: [Soluções alternativas]
+- Vantagens Competitivas: [O que diferencia você]
 
 ### Market Trends
 - Industry Evolution: How is the market changing?

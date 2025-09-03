@@ -1,251 +1,251 @@
-# Context Architecture Template
-*A strategic framework for designing documentation and context systems that enable AI-powered development*
+# Template de Arquitetura de Contexto
+*Um framework estratégico para projetar documentação e sistemas de contexto que habilitam desenvolvimento orientado por IA*
 
 ---
 
-## Purpose of This Template
+## Propósito deste Template
 
-This template helps software development teams design their **Context Architecture** - the systematic approach to organizing, structuring, and maintaining all project information so that both humans and AI can work effectively with your codebase.
+Este template ajuda equipes de desenvolvimento de software a projetar sua **Arquitetura de Contexto** - a abordagem sistemática para organizar, estruturar e manter todas as informações do projeto para que tanto humanos quanto IA possam trabalhar efetivamente com seu código.
 
-**Use this template to:**
-- Define what documentation and context your project needs
-- Structure information for optimal AI consumption
-- Create sustainable knowledge management systems
-- Enable effective human-AI collaboration
-- Scale development team productivity
+**Use este template para:**
+- Definir que documentação e contexto seu projeto precisa
+- Estruturar informação para consumo otimizado pela IA
+- Criar sistemas sustentáveis de gestão de conhecimento
+- Habilitar colaboração efetiva humano-IA
+- Escalar a produtividade da equipe de desenvolvimento
 
 ---
 
-## Project Context Profile
+## Perfil do Contexto do Projeto
 
-### Basic Project Information
+### Informações Básicas do Projeto
 
-**Project Name:** `[Your Project Name]`
+**Nome do Projeto:** `[Nome do Seu Projeto]`
 
-**Project Type:** 
-- [ ] Web Application
-- [ ] Mobile Application  
-- [ ] API/Backend Service
-- [ ] Desktop Application
-- [ ] Library/Framework
-- [ ] CLI Tool
-- [ ] Infrastructure/DevOps
-- [ ] Other: `__________`
+**Tipo do Projeto:** 
+- [ ] Aplicação Web
+- [ ] Aplicação Mobile  
+- [ ] API/Serviço Backend
+- [ ] Aplicação Desktop
+- [ ] Biblioteca/Framework
+- [ ] Ferramenta CLI
+- [ ] Infraestrutura/DevOps
+- [ ] Outro: `__________`
 
-**Technology Stack:**
-- **Primary Language:** `__________`
+**Stack Tecnológico:**
+- **Linguagem Principal:** `__________`
 - **Framework/Runtime:** `__________`
-- **Database:** `__________`
-- **Cloud/Infrastructure:** `__________`
-- **Key Dependencies:** `__________`
+- **Banco de Dados:** `__________`
+- **Nuvem/Infraestrutura:** `__________`
+- **Dependências Principais:** `__________`
 
-**Team Structure:**
-- **Team Size:** `____` developers
-- **Experience Level:** 
-  - [ ] Junior (0-2 years)
-  - [ ] Mid-level (2-5 years)
-  - [ ] Senior (5+ years)
-  - [ ] Mixed team
-- **AI Tool Usage:**
+**Estrutura da Equipe:**
+- **Tamanho da Equipe:** `____` desenvolvedores
+- **Nível de Experiência:** 
+  - [ ] Júnior (0-2 anos)
+  - [ ] Intermediário (2-5 anos)
+  - [ ] Sênior (5+ anos)
+  - [ ] Equipe mista
+- **Uso de Ferramentas IA:**
   - [ ] GitHub Copilot
-  - [ ] Claude/ChatGPT for development
+  - [ ] Claude/ChatGPT para desenvolvimento
   - [ ] Cursor/Windsurf
-  - [ ] Other: `__________`
+  - [ ] Outro: `__________`
 
-**Development Constraints:**
-- [ ] High compliance requirements (SOX, HIPAA, etc.)
-- [ ] Legacy system integration
-- [ ] Performance-critical application
-- [ ] Rapid prototyping/MVP focus
-- [ ] Long-term maintenance (5+ years)
-- [ ] Multiple team collaboration
-- [ ] External developer onboarding
-
----
-
-## Context Architecture Design
-
-**IMPORTANT: Create a multi-file structure with an index.md that links to separate files for each layer. Do NOT create one large file.**
-
-**Implementation Approach:**
-1. **First**: Create `index.md` with the project profile and layer links
-2. **Then**: Create individual files for each layer as needed
-3. **Finally**: Ensure all links in the index work correctly
-
-**File Naming Convention:**
-- Use UPPERCASE for generic documentation files (e.g., `CODEBASE_GUIDE.md`)
-- Use lowercase for project-specific files (e.g., `project_charter.md`) 
-- Keep filenames descriptive and consistent
-
-### Create an Index File First
-
-**Create: `index.md` (or `technical_context.md`)**
-```markdown
-## Project Context Profile
-
-### Basic Project Information
-[Include the project profile information here]
+**Restrições de Desenvolvimento:**
+- [ ] Altos requisitos de compliance (SOX, HIPAA, etc.)
+- [ ] Integração com sistemas legados
+- [ ] Aplicação crítica em performance
+- [ ] Foco em prototipagem rápida/MVP
+- [ ] Manutenção de longo prazo (5+ anos)
+- [ ] Colaboração de múltiplas equipes
+- [ ] Onboarding de desenvolvedores externos
 
 ---
 
-## Layer 1: Core Project Context
+## Design da Arquitetura de Contexto
 
-- [Project Charter](project_charter.md)
-- [Architecture Decision Records](adr/)
+**IMPORTANTE: Crie uma estrutura multi-arquivo com um index.md que faça links para arquivos separados para cada camada. NÃO crie um arquivo grande único.**
 
-## Layer 2: AI-Optimized Context Files
+**Abordagem de Implementação:**
+1. **Primeiro**: Crie `index.md` com o perfil do projeto e links das camadas
+2. **Depois**: Crie arquivos individuais para cada camada conforme necessário
+3. **Finalmente**: Certifique-se de que todos os links no índice funcionem corretamente
 
-- [AI Development Guide](CLAUDE.meta.md) - Example CLAUDE.md file for project level  
-- [Codebase Navigation Guide](CODEBASE_GUIDE.md)
+**Convenção de Nomeação de Arquivos:**
+- Use MAIÚsCULAS para arquivos de documentação genéricos (ex.: `GUIA_CODEBASE.md`)
+- Use minúsculas para arquivos específicos do projeto (ex.: `charter_projeto.md`) 
+- Mantenha nomes de arquivo descritivos e consistentes
 
-## Layer 3: Domain-Specific Context
+### Crie um Arquivo Índice Primeiro
 
-- [Business Logic Documentation](BUSINESS_LOGIC.md)
-- [API Specifications](API_SPECIFICATION.md)
+**Crie: `index.md` (ou `contexto_tecnico.md`)**
+```markdown
+## Perfil do Contexto do Projeto
 
-## Layer 4: Development Workflow Context
+### Informações Básicas do Projeto
+[Inclua as informações do perfil do projeto aqui]
 
-- [Development Workflow Guide](CONTRIBUTING.md)
-- [Troubleshooting Guide](TROUBLESHOOTING.md)
+---
 
-[Include remaining sections: Context Maintenance Strategy, AI Integration Guidelines, Success Metrics, Implementation Validation]
+## Camada 1: Contexto Central do Projeto
+
+- [Charter do Projeto](charter_projeto.md)
+- [Registros de Decisões Arquiteturais](adr/)
+
+## Camada 2: Arquivos de Contexto Otimizados para IA
+
+- [Guia de Desenvolvimento IA](CLAUDE.meta.md) - Exemplo de arquivo CLAUDE.md para nível de projeto  
+- [Guia de Navegação do Codebase](GUIA_CODEBASE.md)
+
+## Camada 3: Contexto Específico do Domínio
+
+- [Documentação da Lógica de Negócio](LOGICA_NEGOCIO.md)
+- [Especificações da API](ESPECIFICACAO_API.md)
+
+## Camada 4: Contexto do Fluxo de Desenvolvimento
+
+- [Guia de Fluxo de Desenvolvimento](CONTRIBUTING.md)
+- [Guia de Solução de Problemas](TROUBLESHOOTING.md)
+
+[Incluir seções restantes: Estratégia de Manutenção de Contexto, Diretrizes de Integração IA, Métricas de Sucesso, Validação de Implementação]
 ```
 
-### Layer 1: Core Project Context
+### Camada 1: Contexto Central do Projeto
 
-**Create: `project_charter.md`**
+**Crie: `charter_projeto.md`**
 ```markdown
-# Project Charter: [Project Name]
+# Charter do Projeto: [Nome do Projeto]
 
-## Vision Statement
-What does this project aim to achieve? Why does it exist?
+## Declaração de Visão
+O que este projeto visa alcançar? Por que ele existe?
 
-## Success Criteria
-How will you know if this project is successful?
+## Critérios de Sucesso
+Como você saberá se este projeto é bem-sucedido?
 
-## Scope Boundaries
-What is explicitly IN scope and OUT of scope?
+## Limites do Escopo
+O que está explicitamente DENTRO e FORA do escopo?
 
-## Key Stakeholders
-Who are the primary users, sponsors, and decision makers?
+## Stakeholders Principais
+Quem são os usuários primários, patrocinadores e tomadores de decisão?
 
-## Technical Constraints
-What are the non-negotiable technical requirements?
+## Restrições Técnicas
+Quais são os requisitos técnicos inegociáveis?
 ```
 
-**Create: `adr/` directory with individual ADR files**
+**Crie: diretório `adr/` com arquivos ADR individuais**
 ```markdown
-File: `adr/001-[decision-name].md`
-Purpose: Context for why technical decisions were made
+Arquivo: `adr/001-[nome-decisao].md`
+Propósito: Contexto para por que decisões técnicas foram tomadas
 
-Template per decision:
-# ADR-001: [Decision Title]
+Template por decisão:
+# ADR-001: [Título da Decisão]
 
-## Context
-What circumstances led to this decision?
+## Contexto
+Que circunstâncias levaram a esta decisão?
 
-## Decision
-What did we decide?
+## Decisão
+O que decidimos?
 
-## Rationale
-Why did we choose this approach?
+## Justificativa
+Por que escolhemos esta abordagem?
 
-## Consequences
-What are the positive and negative impacts?
+## Consequências
+Quais são os impactos positivos e negativos?
 
-## Alternatives Considered
-What other options did we evaluate?
+## Alternativas Consideradas
+Que outras opções avaliamos?
 ```
 
-### Layer 2: AI-Optimized Context Files
+### Camada 2: Arquivos de Contexto Otimizados para IA
 
-**Create: `CLAUDE.meta.md` (AI Development Guide)**
+**Crie: `CLAUDE.meta.md` (Guia de Desenvolvimento IA)**
 ```markdown
-# AI Development Guide
+# Guia de Desenvolvimento IA
 
-## Code Style Preferences
-- Preferred patterns and conventions
-- Code organization principles
-- Naming conventions
-- Comment style requirements
+## Preferências de Estilo de Código
+- Padrões e convenções preferidos
+- Princípios de organização do código
+- Convenções de nomeação
+- Requisitos de estilo de comentários
 
-## Testing Approach
-- Testing framework used
-- Test file structure and naming
-- Coverage requirements
-- Test data management
+## Abordagem de Testes
+- Framework de testes usado
+- Estrutura e nomeação de arquivos de teste
+- Requisitos de cobertura
+- Gestão de dados de teste
 
-## Common Patterns
-- Frequently used design patterns
-- Project-specific abstractions
-- Error handling conventions
-- Logging and monitoring patterns
+## Padrões Comuns
+- Padrões de design frequentemente usados
+- Abstrações específicas do projeto
+- Convenções de tratamento de erro
+- Padrões de logging e monitoramento
 
-## Gotchas and Anti-patterns
-- Common mistakes to avoid
-- Performance considerations
-- Security requirements
-- Integration pitfalls
+## Pegadinhas e Anti-padrões
+- Erros comuns a evitar
+- Considerações de performance
+- Requisitos de segurança
+- Armadilhas de integração
 ```
 
-**Create: `CODEBASE_GUIDE.md`**
+**Crie: `GUIA_CODEBASE.md`**
 ```markdown
-# Codebase Navigation Guide
+# Guia de Navegação do Codebase
 
-## Directory Structure
+## Estrutura de Diretórios
 ```
 /src
-  /components  # Reusable UI components
-  /services    # Business logic layer
-  /utils       # Helper functions
-/tests         # Test files
-/docs          # Documentation
+  /components  # Componentes de UI reutilizáveis
+  /services    # Camada de lógica de negócio
+  /utils       # Funções auxiliares
+/tests         # Arquivos de teste
+/docs          # Documentação
 ```
 
-## Key Files and Their Purpose
-- `src/main.js` - Application entry point
-- `src/config.js` - Configuration management
-- `src/router.js` - Route definitions
+## Arquivos Principais e Seu Propósito
+- `src/main.js` - Ponto de entrada da aplicação
+- `src/config.js` - Gestão de configuração
+- `src/router.js` - Definições de rotas
 
-## Data Flow Patterns
-How data moves through the application
+## Padrões de Fluxo de Dados
+Como os dados se movem pela aplicação
 
-## Integration Points
-External services, APIs, databases
+## Pontos de Integração
+Serviços externos, APIs, bancos de dados
 
-## Deployment Architecture
-How the application is deployed and scaled
+## Arquitetura de Deploy
+Como a aplicação é implantada e escalada
 ```
 
-### Layer 3: Domain-Specific Context
+### Camada 3: Contexto Específico do Domínio
 
-**Create: `BUSINESS_LOGIC.md` (CONDITIONAL)**
+**Crie: `LOGICA_NEGOCIO.md` (CONDICIONAL)**
 ```markdown
-Required if:
-- [ ] Complex business rules exist
-- [ ] Domain expertise needed
-- [ ] Regulatory compliance involved
-- [ ] Non-obvious business logic
+Necessário se:
+- [ ] Existem regras de negócio complexas
+- [ ] Expertise do domínio é necessária
+- [ ] Compliance regulatório está envolvido
+- [ ] Lógica de negócio não óbvia
 
-# Business Logic Documentation
+# Documentação da Lógica de Negócio
 
-## Domain Concepts
-Key business entities and their relationships
+## Conceitos do Domínio
+Entidades de negócio principais e seus relacionamentos
 
-## Business Rules
-Detailed explanation of business logic
+## Regras de Negócio
+Explicação detalhada da lógica de negócio
 
-## Validation Rules
-Data validation requirements and rationale
+## Regras de Validação
+Requisitos de validação de dados e justificativa
 
-## Workflow Processes
-Step-by-step business processes
+## Processos de Workflow
+Processos de negócio passo a passo
 
-## Edge Cases
-Known edge cases and how to handle them
+## Casos Extremos
+Casos extremos conhecidos e como lidar com eles
 ```
 
-**Create: `API_SPECIFICATION.md` (CONDITIONAL)**
+**Crie: `ESPECIFICACAO_API.md` (CONDICIONAL)**
 ```markdown
 Required if:
 - [ ] Building APIs for external consumption
@@ -271,67 +271,67 @@ Error codes, messages, and recovery strategies
 Usage limits and performance expectations
 ```
 
-### Layer 4: Development Workflow Context
+### Camada 4: Contexto do Fluxo de Desenvolvimento
 
-**Create: `CONTRIBUTING.md` (Development Workflow Guide)**
+**Crie: `CONTRIBUTING.md` (Guia de Fluxo de Desenvolvimento)**
 ```markdown
-# Development Workflow
+# Fluxo de Desenvolvimento
 
-## Branch Strategy
-Git workflow and branching conventions
+## Estratégia de Branch
+Fluxo Git e convenções de branching
 
-## Code Review Process
-Review requirements and criteria
+## Processo de Code Review
+Requisitos e critérios de revisão
 
-## Testing Requirements
-What tests are required before merging
+## Requisitos de Teste
+Que testes são necessários antes do merge
 
-## Deployment Process
-How code gets from development to production
+## Processo de Deploy
+Como o código vai do desenvolvimento para produção
 
-## Environment Setup
-Local development environment setup
+## Configuração do Ambiente
+Configuração do ambiente de desenvolvimento local
 
-## Debugging Guide
-Common debugging scenarios and tools
+## Guia de Debugging
+Cenários comuns de debugging e ferramentas
 ```
 
-**Create: `TROUBLESHOOTING.md`**
+**Crie: `SOLUCAO_PROBLEMAS.md`**
 ```markdown
-# Troubleshooting Guide
+# Guia de Solução de Problemas
 
-## Common Development Issues
-Frequently encountered problems and solutions
+## Problemas Comuns de Desenvolvimento
+Problemas encontrados frequentemente e soluções
 
-## Environment-Specific Issues
-Problems specific to local/staging/production
+## Problemas Específicos do Ambiente
+Problemas específicos para local/staging/produção
 
-## Performance Issues
-Known performance bottlenecks and optimizations
+## Problemas de Performance
+Gargalos de performance conhecidos e otimizações
 
-## Integration Issues
-Third-party service integration problems
+## Problemas de Integração
+Problemas de integração com serviços de terceiros
 
-## Emergency Procedures
-Critical issue response procedures
+## Procedimentos de Emergência
+Procedimentos de resposta a problemas críticos
 ```
 
 ---
 
-## Context Maintenance Strategy
+## Estratégia de Manutenção de Contexto
 
-### Ownership and Responsibility
+### Propriedade e Responsabilidade
 
-**Documentation Owner Assignment:**
+**Atribuição de Proprietário da Documentação:**
 - **Project Charter:** `[Role/Person]` - Updated when major scope changes
 - **ADRs:** `[Role/Person]` - Added for significant architectural decisions
 - **AI Development Guide:** `[Role/Person]` - Updated as coding standards evolve
 - **Business Logic:** `[Role/Person]` - Updated when business rules change
 - **API Specs:** `[Role/Person]` - Updated with API changes
 
-### Update Triggers
+### Gatilhos de Atualização
 
-**When to update documentation:**
+**Quando atualizar a documentação:**
 - [ ] New major features added
 - [ ] Architecture decisions made
 - [ ] Business rules change
@@ -340,9 +340,9 @@ Critical issue response procedures
 - [ ] Team composition changes
 - [ ] Technology stack updates
 
-### Quality Assurance Process
+### Processo de Garantia de Qualidade
 
-**Documentation Review Checklist:**
+**Checklist de Revisão da Documentação:**
 - [ ] Information is current and accurate
 - [ ] Examples work and are tested
 - [ ] Language is clear and unambiguous
@@ -352,11 +352,11 @@ Critical issue response procedures
 
 ---
 
-## AI Integration Guidelines
+## Diretrizes de Integração com IA
 
-### Context File Organization
+### Organização de Arquivos de Contexto
 
-**Recommended file structure for AI consumption:**
+**Estrutura de arquivos recomendada para consumo pela IA:**
 ```
 /specs/technical/               # or /docs/context/
   index.md                     # Main index with links to all layers
