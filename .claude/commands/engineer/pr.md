@@ -10,7 +10,7 @@ Agora é solicitado que você faça um PR. Siga estes passos cuidadosamente para
 
    Importante: Não mencione nenhum código relacionado a AI ou Claude no PR.
 
-5. Após abrir o PR, aguarde 3 minutos e então verifique comentários da ferramenta automatizada de code review. Se nenhum comentário aparecer, aguarde mais 3 minutos e verifique novamente.
+5. Aguarde 3 minutos e verifique comentários da ferramenta automatizada de code review. Se nenhum comentário aparecer, aguarde mais 3 minutos e verifique novamente.
 
 6. Uma vez que você receba comentários da ferramenta automatizada de code review, analise cada comentário cuidadosamente. Determine quais comentários requerem correções e quais podem ser ignorados com segurança ou explicados. Apresente suas sugestões ao usuário e peça permissão para fazer as mudanças.
 

@@ -15,7 +15,8 @@ Para trabalhar nisso, você deve:
 
 Importante:
 
-Quando você desenvolver o código para a fase atual, use os sub-agentes de desenvolvimento, code-review e teste quando apropriado para preservar o máximo possível do seu contexto.
+Quando você desenvolver o código para a fase atual, use os sub-agentes de desenvolvimento (python-developer, react-developer, etc), code-review e teste (test-engineer) quando apropriado para preservar o máximo possível do seu contexto. Use o agente correto para cada situação, pois ele é o mais apto a resolver o problema.
+
 Toda vez que completar uma fase do plano:
 - Pause e peça ao usuário para validar seu código.
 - Faça as mudanças necessárias até ser aprovado

@@ -33,6 +33,8 @@ Se algo que você discutiu aqui afeta o que foi escrito nos requisitos, peça pe
 Se o requisito estiver em um card do Linear, edite o card do Linear.
 Se o requisito for de um arquivo de texto, edite o arquivo de texto.
 
+IMPORTANT: Neste momento, PARE e espere a aprovação expressa do usuario antes de continuar. 
+
 ## Arquitetura
 
 Dado seu entendimento do que será construído, você agora procederá ao desenvolvimento da arquitetura da funcionalidade. O documento de arquitetura deve mapear o que está sendo construído, os componentes, as dependências, os padrões, as tecnologias, as restrições, as suposições, os trade-offs, as alternativas, as consequências.
