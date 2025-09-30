@@ -63,8 +63,6 @@ Detalhes sobre a tarefa
 
 
 Dicas:
-   - Use repoprompt:search (se disponível) para encontrar arquivos específicos baseados nas respostas de descoberta
-   - Use repoprompt:set_selection e repoprompt:read_selected_files (se disponível) para ler código relevante em batch
    - Analise detalhes específicos de implementação
    - Use WebSearch e ou context7 para melhores práticas ou documentação de bibliotecas (se necessário)
 

@@ -44,8 +44,6 @@ Dado seu entendimento do que será construído, você agora procederá ao desenv
 Nesta seção, espera-se que você analise o código fonte relevante, entenda sua estrutura e propósito, e então construa uma arquitetura que se alinha com os padrões e melhores práticas do projeto.
 
 Dicas:
-   - Use mcp__RepoPrompt__search (se disponível) para encontrar arquivos específicos baseados nas respostas de descoberta
-   - Use mcp__RepoPrompt__set_selection e read_selected_files (se disponível) para ler código relevante em batch
    - Mergulhe fundo em funcionalidades e padrões similares
    - Analise detalhes específicos de implementação
    - Use WebSearch e ou context7 para melhores práticas ou documentação de bibliotecas (se necessário)
