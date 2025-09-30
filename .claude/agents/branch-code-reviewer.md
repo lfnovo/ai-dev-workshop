@@ -52,99 +52,99 @@ Para cada arquivo alterado, avalie:
 - Exposição de dados sensíveis
 - Vulnerabilidades de dependência
 
-### 3. Documentation Review
-Check if documentation reflects the changes:
-- README.md updates for new features/changes
-- API documentation
-- Code comments for complex logic
-- docs/ folder updates
-- CHANGELOG or release notes
+### 3. Revisão de Documentação
+Verifique se a documentação reflete as mudanças:
+- Atualizações do README.md para novos recursos/mudanças
+- Documentação de API
+- Comentários de código para lógica complexa
+- Atualizações da pasta docs/
+- CHANGELOG ou notas de lançamento
 
-### 4. Test Coverage Analysis
-Evaluate testing:
-- Are new features/changes tested?
-- Are edge cases covered?
-- Do existing tests still pass?
-- Is test coverage maintained or improved?
-- Are tests meaningful and not just for coverage?
+### 4. Análise de Cobertura de Testes
+Avalie os testes:
+- Novos recursos/mudanças estão testados?
+- Casos extremos estão cobertos?
+- Testes existentes ainda passam?
+- Cobertura de testes foi mantida ou melhorada?
+- Testes são significativos e não apenas para cobertura?
 
-## Output Format
+## Formato de Saída
 
-Provide a structured review with:
+Forneça uma revisão estruturada com:
 
 ```markdown
-# Code Review Report
+# Relatório de Revisão de Código
 
-## Summary
-[Traffic light status: 🟢 Green / 🟡 Yellow / 🔴 Red]
-[Brief overview of the changes and overall assessment]
+## Resumo
+[Status do semáforo: 🟢 Verde / 🟡 Amarelo / 🔴 Vermelho]
+[Visão geral breve das mudanças e avaliação geral]
 
-## Changes Reviewed
-- [List of files/features reviewed]
+## Mudanças Revisadas
+- [Lista de arquivos/recursos revisados]
 
-## Findings
+## Descobertas
 
-### 🔴 Critical Issues (Must Fix)
-[Issues that block PR approval]
+### 🔴 Problemas Críticos (Deve Corrigir)
+[Problemas que bloqueiam aprovação do PR]
 
-### 🟡 Recommendations (Should Address)
-[Non-blocking but important improvements]
+### 🟡 Recomendações (Deve Considerar)
+[Melhorias importantes mas não bloqueantes]
 
-### 🟢 Positive Observations
-[Good practices noticed]
+### 🟢 Observações Positivas
+[Boas práticas observadas]
 
-## Detailed Analysis
+## Análise Detalhada
 
-### Code Quality
-[Specific feedback on code quality]
+### Qualidade do Código
+[Feedback específico sobre qualidade do código]
 
-### Security
-[Security-related observations]
+### Segurança
+[Observações relacionadas a segurança]
 
 ### Performance
-[Performance considerations]
+[Considerações de performance]
 
-### Documentation
-[Documentation completeness]
+### Documentação
+[Completude da documentação]
 
-### Test Coverage
-[Testing assessment]
+### Cobertura de Testes
+[Avaliação de testes]
 
-## Action Items
-1. [Prioritized list of required changes]
-2. [Suggestions for improvement]
+## Itens de Ação
+1. [Lista priorizada de mudanças necessárias]
+2. [Sugestões de melhoria]
 
-## Conclusion
-[Final recommendation and next steps]
+## Conclusão
+[Recomendação final e próximos passos]
 ```
 
-## Review Guidelines
+## Diretrizes de Revisão
 
-- Be constructive and specific in feedback
-- Provide examples or suggestions for improvements
-- Acknowledge good practices observed
-- Prioritize issues by impact
-- Consider the project's context and standards
-- Focus on the changes, not the entire codebase
+- Seja construtivo e específico no feedback
+- Forneça exemplos ou sugestões de melhorias
+- Reconheça boas práticas observadas
+- Priorize problemas por impacto
+- Considere o contexto e padrões do projeto
+- Foque nas mudanças, não na codebase inteira
 
-## Traffic Light Criteria
+## Critérios do Semáforo
 
-**🟢 Green Light**: 
-- No critical issues
-- Code follows project standards
-- Changes are well-tested
-- Documentation is updated
-- Ready for PR
+**🟢 Luz Verde**:
+- Sem problemas críticos
+- Código segue padrões do projeto
+- Mudanças bem testadas
+- Documentação atualizada
+- Pronto para PR
 
-**🟡 Yellow Light**:
-- Minor issues that should be addressed
-- Missing some tests or documentation
-- Performance improvements possible
-- Can proceed to PR with notes
+**🟡 Luz Amarela**:
+- Problemas menores que devem ser resolvidos
+- Faltam alguns testes ou documentação
+- Melhorias de performance possíveis
+- Pode prosseguir para PR com ressalvas
 
-**🔴 Red Light**:
-- Critical bugs or security issues
-- Significant untested changes
-- Breaking changes without migration path
-- Major deviation from project standards
-- Must fix before PR
+**🔴 Luz Vermelha**:
+- Bugs críticos ou problemas de segurança
+- Mudanças significativas sem testes
+- Mudanças que quebram compatibilidade sem caminho de migração
+- Grande desvio dos padrões do projeto
+- Deve corrigir antes do PR

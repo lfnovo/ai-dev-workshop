@@ -51,12 +51,12 @@ Temos diversos arquivos de exemplo nesta pasta. Você pode e deve modifica-los d
 
 | Comando | Descrição |
 |---------|-----------|
-| [/warm-up](.claude/commands/warm-up.md) | Refresca a memória do agente sobre o que é o projeto |
-| [/check](.claude/commands/check.md) | Checa se os requirements batem com as meta specs |
-| [/collect](.claude/commands/collect.md) | Coleta um novo requirement rapidamente, sem muita pergunta |
-| [/refine](.claude/commands/refine.md) | Faz um refinamento básico no requirement (WHY/WHAT/HOW) |
-| [/spec](.claude/commands/spec.md) | Especifica o requirement em detalhes (deixe no seu formato de PRD) |
-| [/architecture](.claude/commands/architecture.md) | Faz o desenho da arquitetura do projeto |
+| [/warm-up](.claude/commands/product/warm-up.md) | Refresca a memória do agente sobre o que é o projeto |
+| [/check](.claude/commands/product/check.md) | Checa se os requirements batem com as meta specs |
+| [/collect](.claude/commands/product/collect.md) | Coleta um novo requirement rapidamente, sem muita pergunta |
+| [/refine](.claude/commands/product/refine.md) | Faz um refinamento básico no requirement (WHY/WHAT/HOW) |
+| [/spec](.claude/commands/product/spec.md) | Especifica o requirement em detalhes (deixe no seu formato de PRD) |
+| [/architecture](.claude/commands/product/architecture.md) | Faz o desenho da arquitetura do projeto |
 
 A ordem de execução deste fluxo é:
 
@@ -97,35 +97,35 @@ graph LR
     pre-pr --> pr
 ```
 
-#### [/start](.claude/commands/start.md)
+#### [/start](.claude/commands/engineer/start.md)
 
-Este comando inicia o processo de desenvolvimento em uma branch. Ele garante que estamos em uma branch, e cria uma pasta dentro de .claude/sessions com o mesmo nome da branch para armazenar seus documentos intermediários. 
+Este comando inicia o processo de desenvolvimento em uma branch. Ele garante que estamos em uma branch, e cria uma pasta dentro de .claude/sessions com o mesmo nome da branch para armazenar seus documentos intermediários.
 
 1. Chame o comando com o card ou com o caminho de um arquivo com os requirements (boa prática é criar um arquivo requirements.md na pasta sessions/<branch-name>)
-2. AI vai ler os requirements e gerar uma lista de perguntas para clarificar o que deve ser feito. Responda as perguntas dando o direcionamento adequado. 
+2. AI vai ler os requirements e gerar uma lista de perguntas para clarificar o que deve ser feito. Responda as perguntas dando o direcionamento adequado.
 3. AI vai gerar um arquivo context.md na pasta sessions/<branch-name> mostrando seu entendimento do card. Itere neste arquivo até estar correto.
 4. AI vai gerar um arquivo architecture.md na pasta sessions/<branch-name> mostrando sua proposta de arquitetura. Itere neste arquivo até estar correto.
 
-#### [/plan](.claude/commands/plan.md)
+#### [/plan](.claude/commands/engineer/plan.md)
 
-Este comando inicia o processo de planejamento de desenvolvimento em uma branch. Ele vai ler os documentos intermediários e criar um arquivo plan.md na pasta sessions/<branch-name> mostrando sua proposta de planejamento em etapas. O prompt pede que ele quebre em pedaços para ficar mais fácil fazer o gerenciamento das sessões. 
+Este comando inicia o processo de planejamento de desenvolvimento em uma branch. Ele vai ler os documentos intermediários e criar um arquivo plan.md na pasta sessions/<branch-name> mostrando sua proposta de planejamento em etapas. O prompt pede que ele quebre em pedaços para ficar mais fácil fazer o gerenciamento das sessões.
 
-#### [/work](.claude/commands/work.md)
+#### [/work](.claude/commands/engineer/work.md)
 
-Este comando inicia o processo de desenvolvimento em uma branch. Ele vai ler os documentos intermediários, encontrar o plano, identificar em qual etapa do plano está e começar a coda-la. Ele está instruído para pedir sua aprovação explicita antes de seguir (mude isso se quiser), recomendo deixar. 
+Este comando inicia o processo de desenvolvimento em uma branch. Ele vai ler os documentos intermediários, encontrar o plano, identificar em qual etapa do plano está e começar a coda-la. Ele está instruído para pedir sua aprovação explicita antes de seguir (mude isso se quiser), recomendo deixar.
 
-Boa prática: vá fazendo commits conforme cada phase é completada para poder voltar atrás caso aconteça algum problema. 
+Boa prática: vá fazendo commits conforme cada phase é completada para poder voltar atrás caso aconteça algum problema.
 
-#### [/pre-pr](.claude/commands/pre-pr.md)
+#### [/pre-pr](.claude/commands/engineer/pre-pr.md)
 
-Este comando inicia o processo de pré-PR em uma branch. Ele vai executar 4 agentes para garantir que nosso código está de acordo com o nosso objetivo: 
+Este comando inicia o processo de pré-PR em uma branch. Ele vai executar 4 agentes para garantir que nosso código está de acordo com o nosso objetivo:
 
 1. `branch-metaspec-checker`.
 2. `branch-code-reviewer`
 3. `branch-documentation-writer`
 4. `branch-test-planner`
 
-#### [/pr](.claude/commands/pr.md)
+#### [/pr](.claude/commands/engineer/pr.md)
 
 Este comando inicia o processo de PR em uma branch. Configure-o para deixá-lo compatível com seu próprio fluxo de PR.
 
