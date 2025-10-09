@@ -129,6 +129,137 @@ Este comando inicia o processo de pré-PR em uma branch. Ele vai executar 4 agen
 
 Este comando inicia o processo de PR em uma branch. Configure-o para deixá-lo compatível com seu próprio fluxo de PR.
 
+## DOCUMENTAÇÃO
+
+O framework oferece dois fluxos de documentação dependendo da complexidade da sua estrutura de repositórios:
+
+### Documentação de Projeto Único
+
+Para projetos com um único repositório, use os comandos de metaspecs:
+
+| Comando | Descrição |
+|---------|-----------|
+| [/metaspecs/build-tech-docs](.claude/commands/metaspecs/build-tech-docs.md) | Gera documentação técnica completa do projeto |
+| [/metaspecs/build-business-docs](.claude/commands/metaspecs/build-business-docs.md) | Gera documentação de negócio e contexto do projeto |
+| [/metaspecs/build-index](.claude/commands/metaspecs/build-index.md) | Gera ou atualiza o índice de documentação |
+
+### Documentação Multi-Repositório
+
+Para projetos com **múltiplos repositórios**, use o processo recursivo de documentação:
+
+```mermaid
+graph TD
+    A[Repositório 1] -->|/repodocs/generate-docs| B[docs/ no Repo 1]
+    C[Repositório 2] -->|/repodocs/generate-docs| D[docs/ no Repo 2]
+    E[Repositório 3] -->|/repodocs/generate-docs| F[docs/ no Repo 3]
+
+    B -->|/metaspecs/build-repo-summary| G[technical/repo1.md]
+    D -->|/metaspecs/build-repo-summary| H[technical/repo2.md]
+    F -->|/metaspecs/build-repo-summary| I[technical/repo3.md]
+
+    G --> J[metaspecs/technical/]
+    H --> J
+    I --> J
+
+    J -->|/metaspecs/build-index| K[index.md atualizado]
+```
+
+#### Passo 1: Gerar Documentação em Cada Repositório
+
+Execute em **cada repositório** do seu projeto:
+
+```bash
+/repodocs/generate-docs
+```
+
+Este comando irá:
+1. Analisar a estrutura do repositório (stack, arquitetura, padrões)
+2. Fazer perguntas sobre funcionalidades, APIs, microserviços e integrações
+3. Gerar documentação completa na pasta `docs/` incluindo:
+   - `stack.md` - Stack tecnológica e arquitetura
+   - `patterns.md` - Padrões de design utilizados
+   - `features.md` - Lista de funcionalidades
+   - `business-rules.md` - Regras de negócio implementadas
+   - `integrations.md` - Comunicação com outros serviços/repositórios
+   - `apis.md` - Descrição de APIs (se aplicável)
+   - `services.md` - Regras de microserviços (se aplicável)
+   - `index.md` - Índice apontando para todos os arquivos
+
+**Importante**: Este comando se adapta ao tipo de repositório (API, microserviço, biblioteca, frontend) e gera apenas os arquivos relevantes.
+
+#### Passo 2: Consolidar Resumos nas Metaspecs
+
+Na pasta de metaspecs do projeto, execute para cada repositório:
+
+```bash
+/metaspecs/build-repo-summary <caminho-do-repo> [caminho-de-saída]
+```
+
+**Exemplos de uso:**
+
+```bash
+# Gera: technical/payment-api.md
+/metaspecs/build-repo-summary ~/dev/payment-api
+
+# Gera: technical/apis/payment.md
+/metaspecs/build-repo-summary ~/dev/payment-api apis/payment.md
+
+# Gera: technical/core/lib.md
+/metaspecs/build-repo-summary https://github.com/org/core-lib core/lib.md
+```
+
+Este comando irá:
+1. Ler a documentação da pasta `docs/` do repositório
+2. Criar um resumo executivo contendo:
+   - **Propósito e papel** do repositório no ecossistema
+   - **Funcionalidades principais** (top 5-7)
+   - **Stack básica** (linguagem, framework, banco de dados)
+   - **Relações com outros repositórios** e serviços
+
+O resumo é otimizado para permitir que agentes de IA arquitetos identifiquem rapidamente em quais repositórios precisam atuar ao planejar novas features.
+
+#### Passo 3: Atualizar Índice Geral
+
+Depois de consolidar todos os resumos, atualize o índice:
+
+```bash
+/metaspecs/build-index
+```
+
+### Organização Recomendada de Metaspecs Multi-Repositório
+
+```
+metaspecs/
+├── technical/
+│   ├── core/
+│   │   ├── main-app.md
+│   │   └── shared-lib.md
+│   ├── apis/
+│   │   ├── payment.md
+│   │   ├── user.md
+│   │   └── notification.md
+│   ├── services/
+│   │   ├── auth-service.md
+│   │   └── analytics-service.md
+│   └── frontend/
+│       ├── web-app.md
+│       └── mobile-app.md
+└── index.md
+```
+
+### Quando Usar Cada Abordagem?
+
+**Use Documentação de Projeto Único quando:**
+- Você tem apenas um repositório
+- Toda a lógica está centralizada
+- É um projeto monolítico
+
+**Use Documentação Multi-Repositório quando:**
+- Você tem múltiplos repositórios relacionados
+- Arquitetura de microserviços
+- Múltiplas equipes trabalhando em repos diferentes
+- Necessidade de visão consolidada do ecossistema
+
 ## FAQ
 
 ### Como eu forneço acesso as metaspecs para os agentes?
