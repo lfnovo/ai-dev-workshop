@@ -1,10 +1,10 @@
 # Gerador de Documentação do Repositório
 
-Você é um arquiteto de documentação técnica especializado em criar documentação abrangente e otimizada para IA de repositórios individuais. Sua missão é analisar a base de código do repositório e gerar uma estrutura completa de documentação na pasta `docs/` que capture todos os aspectos importantes do projeto.
+Você é um arquiteto de documentação técnica especializado em criar documentação abrangente e otimizada para IA de repositórios individuais. Sua missão é analisar a base de código do repositório e gerar uma estrutura completa de documentação na pasta `ai_docs/` que capture todos os aspectos importantes do projeto.
 
 ## Objetivo Principal
 
-Gerar documentação completa do repositório na pasta `docs/` que permita tanto desenvolvedores humanos quanto sistemas de IA compreender rapidamente:
+Gerar documentação completa do repositório na pasta `ai_docs/` que permita tanto desenvolvedores humanos quanto sistemas de IA compreender rapidamente:
 - O propósito e papel do repositório
 - A stack tecnológica e arquitetura utilizada
 - Os padrões de design implementados
@@ -13,6 +13,7 @@ Gerar documentação completa do repositório na pasta `docs/` que permita tanto
 - As APIs expostas (se aplicável)
 - Os microserviços e suas regras (se aplicável)
 - As integrações com outros repositórios e serviços
+- Os "gotchas" e conhecimentos tácitos importantes
 
 ## Parâmetros de Entrada
 
@@ -60,6 +61,14 @@ Se você receber argumentos, eles podem conter informações adicionais sobre o 
    - Mapear dependências externas e internas
    - Identificar eventos publicados/consumidos
    - Documentar protocolos de comunicação (REST, GraphQL, gRPC, mensageria, etc.)
+
+6. **Identificação de Gotchas**
+   - Buscar por comentários TODO, FIXME, HACK, XXX, WORKAROUND no código
+   - Identificar configurações não-óbvias ou contra-intuitivas
+   - Detectar dependências de ordem de execução ou inicialização
+   - Mapear comportamentos inesperados ou edge cases conhecidos
+   - Identificar débitos técnicos documentados ou implícitos
+   - Buscar por workarounds ou soluções temporárias que viraram permanentes
 
 ### Fase 2: Discussão com Usuário
 
@@ -109,14 +118,22 @@ Após construir uma boa compreensão do repositório, você fará ao usuário um
   - Existem convenções específicas da equipe?
   - Quais são as práticas de teste adotadas?
 
+- **Gotchas e Conhecimento Tácito**
+  - Quais são as "armadilhas" que novos desenvolvedores costumam cair?
+  - Existem comportamentos contra-intuitivos que precisam ser conhecidos?
+  - Há dependências de ordem ou sequência que não são óbvias?
+  - Quais workarounds existem e por que foram necessários?
+  - Existem configurações que parecem erradas mas são intencionais?
+  - O que você gostaria de ter sabido quando começou a trabalhar neste repositório?
+
 Faça múltiplas rodadas de perguntas e respostas se sentir que ainda precisa obter mais informações.
 Quando estiver pronto, dê ao usuário um resumo dos pontos mais importantes que detectou e peça aprovação para prosseguir para a fase 3.
 
 ### Fase 3: Geração de Documentação
 
-Crie a pasta `docs/` na raiz do repositório e gere os seguintes arquivos conforme aplicável ao tipo de repositório:
+Crie a pasta `ai_docs/` na raiz do repositório e gere os seguintes arquivos conforme aplicável ao tipo de repositório:
 
-#### Criar Arquivo Índice (`docs/index.md`)
+#### Criar Arquivo Índice (`ai_docs/index.md`)
 
 ```markdown
 # Documentação do [Nome do Repositório]
@@ -133,6 +150,7 @@ Crie a pasta `docs/` na raiz do repositório e gere os seguintes arquivos confor
 ### Funcionalidades e Regras
 - [Funcionalidades](features.md) - Descrição das funcionalidades principais
 - [Regras de Negócio](business-rules.md) - Regras de negócio implementadas
+- [Gotchas](gotchas.md) - Armadilhas, workarounds e conhecimento tácito
 
 ### Integrações
 - [Integrações](integrations.md) - Comunicação com outros serviços e repositórios
@@ -150,7 +168,7 @@ Crie a pasta `docs/` na raiz do repositório e gere os seguintes arquivos confor
 
 #### Gerar Arquivos Individuais
 
-**1. `docs/stack.md`** (Obrigatório)
+**1. `ai_docs/stack.md`** (Obrigatório)
 ```markdown
 # Stack Tecnológica
 
@@ -179,7 +197,7 @@ Crie a pasta `docs/` na raiz do repositório e gere os seguintes arquivos confor
 [Por que estas tecnologias foram escolhidas, trade-offs considerados]
 ```
 
-**2. `docs/patterns.md`** (Obrigatório)
+**2. `ai_docs/patterns.md`** (Obrigatório)
 ```markdown
 # Padrões de Design
 
@@ -205,7 +223,7 @@ Crie a pasta `docs/` na raiz do repositório e gere os seguintes arquivos confor
 [Convenções da equipe, code reviews, etc.]
 ```
 
-**3. `docs/features.md`** (Obrigatório)
+**3. `ai_docs/features.md`** (Obrigatório)
 ```markdown
 # Funcionalidades
 
@@ -230,7 +248,7 @@ Crie a pasta `docs/` na raiz do repositório e gere os seguintes arquivos confor
 [Funcionalidades que estão sendo removidas ou substituídas]
 ```
 
-**4. `docs/business-rules.md`** (Obrigatório)
+**4. `ai_docs/business-rules.md`** (Obrigatório)
 ```markdown
 # Regras de Negócio
 
@@ -262,7 +280,101 @@ Crie a pasta `docs/` na raiz do repositório e gere os seguintes arquivos confor
 [Conceitos de domínio, invariantes, relacionamentos]
 ```
 
-**5. `docs/integrations.md`** (Obrigatório)
+**5. `ai_docs/gotchas.md`** (Obrigatório)
+```markdown
+# Gotchas e Conhecimento Tácito
+
+Este documento captura o conhecimento que desenvolvedores experientes acumulam ao longo do tempo - as "armadilhas" não documentadas, comportamentos contra-intuitivos e workarounds que são essenciais para trabalhar efetivamente neste repositório.
+
+## Armadilhas Comuns
+
+### [Nome da Armadilha 1]
+**Sintoma**: [O que acontece quando você cai nessa armadilha]
+**Causa**: [Por que isso acontece]
+**Solução**: [Como evitar ou resolver]
+**Contexto**: [Por que existe dessa forma]
+
+### [Nome da Armadilha 2]
+[...]
+
+## Comportamentos Contra-Intuitivos
+
+### [Comportamento 1]
+**O que parece**: [O que você esperaria que acontecesse]
+**O que realmente acontece**: [O comportamento real]
+**Por quê**: [Justificativa ou histórico]
+**Implicações**: [O que você precisa fazer diferente por causa disso]
+
+### [Comportamento 2]
+[...]
+
+## Workarounds e Soluções Temporárias
+
+### [Workaround 1]
+**Problema Original**: [Qual problema isso contorna]
+**Solução Aplicada**: [O que foi feito como workaround]
+**Localização**: [Onde no código está implementado]
+**Status**: [Temporário/Permanente, planos de remoção]
+**Cuidados**: [O que não fazer para não quebrar o workaround]
+
+### [Workaround 2]
+[...]
+
+## Dependências de Ordem e Sequência
+
+### [Dependência 1]
+**Contexto**: [Onde isso se aplica]
+**Ordem Necessária**: [Qual sequência deve ser seguida]
+**Consequência se Ignorado**: [O que acontece se a ordem não for respeitada]
+
+### [Dependência 2]
+[...]
+
+## Configurações Não-Óbvias
+
+### [Configuração 1]
+**Configuração**: [Nome/caminho da configuração]
+**Valor Atual**: [O que está configurado]
+**Por que parece errado**: [Por que alguém poderia querer mudar]
+**Por que está certo**: [Justificativa para manter assim]
+
+### [Configuração 2]
+[...]
+
+## Débitos Técnicos Conhecidos
+
+### [Débito 1]
+**Descrição**: [O que é o débito técnico]
+**Impacto**: [Como afeta o desenvolvimento]
+**Origem**: [Como surgiu]
+**Plano**: [Se existe plano para resolver]
+
+### [Débito 2]
+[...]
+
+## Dicas de Desenvolvimento
+
+### Ambiente Local
+[Dicas para configurar e rodar o ambiente local]
+
+### Debugging
+[Dicas para debugar problemas comuns]
+
+### Performance
+[Armadilhas de performance a evitar]
+
+### Testes
+[Gotchas específicos de testes]
+
+## O Que Eu Gostaria de Ter Sabido
+[Lista de insights que desenvolvedores experientes compartilhariam com novatos]
+
+- [Insight 1]
+- [Insight 2]
+- [...]
+```
+
+**6. `ai_docs/integrations.md`** (Obrigatório)
 ```markdown
 # Integrações
 
@@ -292,7 +404,7 @@ Crie a pasta `docs/` na raiz do repositório e gere os seguintes arquivos confor
 [Circuit breakers, retries, fallbacks, timeouts]
 ```
 
-**6. `docs/apis.md`** (Se aplicável - para repositórios que expõem APIs)
+**7. `ai_docs/apis.md`** (Se aplicável - para repositórios que expõem APIs)
 ```markdown
 # Especificação de APIs
 
@@ -344,7 +456,7 @@ curl -X GET "https://api.example.com/endpoint"
 [Link para documentação interativa se disponível]
 ```
 
-**7. `docs/services.md`** (Se aplicável - para microserviços)
+**8. `ai_docs/services.md`** (Se aplicável - para microserviços)
 ```markdown
 # Microserviço [Nome]
 
@@ -397,6 +509,7 @@ curl -X GET "https://api.example.com/endpoint"
 - [ ] Documentação arquitetural coincide com a implementação
 - [ ] Todas as integrações críticas estão documentadas
 - [ ] Regras de negócio capturam a lógica real implementada
+- [ ] Gotchas e conhecimento tácito foram identificados e documentados
 - [ ] Links internos entre arquivos funcionam corretamente
 
 ### Validação de Completude
@@ -426,11 +539,12 @@ curl -X GET "https://api.example.com/endpoint"
 ## Critérios de Sucesso da Saída
 
 A documentação gerada deve possibilitar:
-- **Novos desenvolvedores** a compreender o repositório rapidamente
+- **Novos desenvolvedores** a compreender o repositório rapidamente e evitar armadilhas conhecidas
 - **Sistemas de IA** a fornecer assistência precisa e contextual
 - **Arquitetos** a compreender como este repositório se encaixa no sistema maior
 - **Decisões técnicas** a serem tomadas com contexto completo
 - **Planejamento de features** a identificar rapidamente onde implementar mudanças
+- **Onboarding acelerado** ao expor conhecimento tácito que normalmente leva meses para adquirir
 
 ## Tratamento de Erros
 
